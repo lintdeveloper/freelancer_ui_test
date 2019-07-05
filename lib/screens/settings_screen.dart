@@ -1,15 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:freelancer_ui_test/utils/screen_size.dart';
+import 'package:freelancer_ui_test/widgets/settings_background.dart';
 
 class SettingsScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    final _media = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('Screen not found'),
-      ),
-      body: Center(
-        child: Text("Hello"),
+      body: ListView(
+        padding: EdgeInsets.zero,
+        physics: BouncingScrollPhysics(),
+        children: <Widget>[
+          Container(
+            color: Colors.grey.shade50,
+            height: _media.height / 2,
+            child: Stack(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 5,
+                      child: SettingsBackground(),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -37,3 +59,6 @@ class SettingsScreen extends StatelessWidget{
   }
 
 }
+
+
+
