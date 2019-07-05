@@ -55,10 +55,9 @@ flutter:
   fonts:
     - family: Avenir
       fonts:
-        - asset: assets/fonts/Avenir-Heavy.ttf
-        - asset: assets/fonts/Avenir-Roman.ttf
-        - asset: assets/fonts/Avenir-Medium.ttf
-        - asset: assets/fonts/Avenir-Heavy.ttf
+        - asset: assets/fonts/avenir/Avenir-Heavy.ttf
+        - asset: assets/fonts/avenir/Avenir-Roman.ttf
+        - asset: assets/fonts/avenir/Avenir-Medium.ttf
 
 
   # For details regarding fonts from package dependencies,
