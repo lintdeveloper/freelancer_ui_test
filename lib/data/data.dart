@@ -1,4 +1,7 @@
 import 'package:freelancer_ui_test/models/settings_card.dart';
+import 'package:freelancer_ui_test/models/user_profile_model.dart';
+import 'package:freelancer_ui_test/models/user_profile_model.dart';
+import 'package:freelancer_ui_test/models/user_profile_model.dart';
 
 List<SettingsCardModel> getSettingsCard() {
   List<SettingsCardModel> settingsCard = [
@@ -12,3 +15,13 @@ List<SettingsCardModel> getSettingsCard() {
 
   return settingsCard;
 }
+
+List<UserProfileModel> getUserProfileCard() {
+  List<UserProfileModel> userProfileCard = [
+    UserProfileModel("assets/images/ricardo.png","Ricardo Joseph","assets/images/verified.png",  "ricardojoseph@gmail.com")
+  ];
+
+  return userProfileCard;
+}
+
+

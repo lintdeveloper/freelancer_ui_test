@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_ui_test/data/data.dart';
 import 'package:freelancer_ui_test/utils/screen_size.dart';
+import 'package:freelancer_ui_test/widgets/profile_card.dart';
 import 'package:freelancer_ui_test/widgets/settings_background.dart';
 import 'package:freelancer_ui_test/widgets/tile_card_widget.dart';
 
@@ -62,6 +63,23 @@ class SettingsScreen extends StatelessWidget {
                         ],
                       ),
                     ],
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    margin: EdgeInsets.only(
+                      left: 20,
+                    ),
+                    height: _media.longestSide <= 775
+                        ? _media.height / 3
+                        : _media.height / 4.3,
+                    width: _media.width,
+                    child: Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: ProfileCard(
+                          profile: getUserProfileCard()[0],
+                        )),
                   ),
                 ),
               ],
