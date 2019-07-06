@@ -8,20 +8,6 @@ ThemeData customThemeData() {
 
   return baseTheme.copyWith(
     primaryColor: kPrimaryColor,
-//    primaryColorDark: kPrimaryDark,
-//    primaryColorLight: kPrimaryLight,
-//    accentColor: kSecondaryColor,
-//    bottomAppBarColor: kSecondaryDark,
     buttonColor: kSecondaryColor,
-//    sliderTheme: SliderThemeData.fromPrimaryColors(
-//      primaryColor: kPrimaryColor,
-//      primaryColorDark: kPrimaryDark,
-//      primaryColorLight: kPrimaryLight,
-//      valueIndicatorTextStyle: TextStyle(),
-//    ),
-//    textTheme: TextTheme().copyWith(
-//        subhead: TextStyle(
-//          fontFamily: "SnackerComic",
-//        )),
   );
 }

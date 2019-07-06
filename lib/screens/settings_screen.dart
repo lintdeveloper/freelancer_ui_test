@@ -95,8 +95,11 @@ class SettingsScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 if(index == 0) {
                   return Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: Text("General"),
+                    padding: const EdgeInsets.only(left: 18.0),
+                    child: Container(
+                        margin: EdgeInsets.only(bottom: 4.0),
+                        child: Text("General",
+                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
                   );
                 }
                   return Container(
@@ -118,8 +121,11 @@ class SettingsScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 if(index == 0) {
                   return Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: Text("General"),
+                    padding: const EdgeInsets.only(left: 18.0),
+                    child: Container(
+                        margin: EdgeInsets.only(bottom: 4.0),
+                        child: Text("General",
+                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
                   );
                 }
                 return Container(
