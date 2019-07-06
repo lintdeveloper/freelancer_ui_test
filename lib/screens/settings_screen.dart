@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_ui_test/data/data.dart';
 import 'package:freelancer_ui_test/utils/screen_size.dart';
+import 'package:freelancer_ui_test/widgets/fab_bottom_appbar.dart';
 import 'package:freelancer_ui_test/widgets/profile_card.dart';
 import 'package:freelancer_ui_test/widgets/settings_background.dart';
 import 'package:freelancer_ui_test/widgets/tile_card_widget.dart';
+import 'package:flutter/cupertino.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -98,16 +100,16 @@ class SettingsScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 18.0),
                     child: Container(
                         margin: EdgeInsets.only(bottom: 4.0),
-                        child: Text("General",
-                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
+                        child: Text("GENERAL",
+                            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
                   );
                 }
-                  return Container(
-                    margin: EdgeInsets.all(3.0),
-                    child: CardTile(
-                      settingsCard: getSettingsCard()[index - 1],
-                    ),
-                  );
+                return Container(
+                  margin: EdgeInsets.all(3.0),
+                  child: CardTile(
+                    settingsCard: getSettingsCard()[index - 1],
+                  ),
+                );
               },
             ),
           ),
@@ -124,8 +126,8 @@ class SettingsScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 18.0),
                     child: Container(
                         margin: EdgeInsets.only(bottom: 4.0),
-                        child: Text("General",
-                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
+                        child: Text("GENERAL",
+                            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400, color: Color.fromRGBO(119,134,158,1)))),
                   );
                 }
                 return Container(
@@ -147,32 +149,18 @@ class SettingsScreen extends StatelessWidget {
         backgroundColor: Color(0xFF0047CC),
         elevation: 4.0,
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {},
-            ),
-          ],
-        ),
-        shape: CircularNotchedRectangle(),
-        color: Colors.white,
-      ),
+      bottomNavigationBar: FABBottomAppBar(
+        color: Colors.grey,
+        selectedColor: Colors.blue,
+        notchedShape: CircularNotchedRectangle(),
+        onTabSelected: null,
+        items: [
+          FABBottomAppBarItem(iconData: CupertinoIcons.home, text: 'Home'),
+          FABBottomAppBarItem(iconData: CupertinoIcons.folder_solid, text: 'Expenses'),
+          FABBottomAppBarItem(iconData: CupertinoIcons.create , text: 'Wallet'),
+          FABBottomAppBarItem(iconData: CupertinoIcons.person_solid, text: 'Profile'),
+        ],
+      )
     );
   }
 
