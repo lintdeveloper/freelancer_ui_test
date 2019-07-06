@@ -17,7 +17,7 @@ class CardTile extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(16.0))),
         margin: EdgeInsets.only(right: 12.0, left: 12.0),
         child: ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
+            contentPadding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 2.0),
             leading: Image.asset(settingsCard.settingsPicture),
             title: Text(
               settingsCard.heading,
@@ -31,44 +31,5 @@ class CardTile extends StatelessWidget {
             trailing: Icon(Icons.keyboard_arrow_right,
                 color: Color.fromRGBO(221, 221, 221, 1), size: 30.0))
     );
-//    return Container(
-//      height: this.height, //220.0
-//      width: _media.width, //370.0
-//      decoration: BoxDecoration(
-//        borderRadius: BorderRadius.only(
-//            bottomRight: const  Radius.circular(40.0)
-//        ),
-//        gradient: LinearGradient(
-//          begin: Alignment.topLeft,
-//          end: Alignment(
-//              -1.0, -1.0), // 10% of the width, so there are ten blinds.
-//          colors: [
-//            const Color.fromRGBO(0, 71, 204, 1),
-//            const Color.fromRGBO(79, 68, 213, 1)
-//          ],
-//          tileMode: TileMode.mirror, // repeats the gradient over the canvas
-//        ),
-//      ),
-//      child: Container(
-//        child: Stack(
-//          children: <Widget>[
-//            Row(
-//              mainAxisAlignment: MainAxisAlignment.end,
-//              children: <Widget>[
-//                Container(
-//                    width: _media.width/2 ,
-//                    height: _media.height/4,
-//                    decoration: BoxDecoration(
-//                        borderRadius: BorderRadius.only(
-//                            bottomLeft: Radius.circular(140.0)),
-//                        color: Color.fromRGBO(79, 68, 213, 1)
-//                    )
-//                ),
-//              ],
-//            )
-//          ],
-//        ),
-//      ),
-//    );
   }
 }

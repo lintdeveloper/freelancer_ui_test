@@ -34,6 +34,52 @@ class SettingsScreen extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            width: _media.width,
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: getSettingsCard().length + 1 ,
+              itemBuilder: (BuildContext context, int index) {
+                if(index == 0) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Text("General"),
+                  );
+                }
+                  return Container(
+                    margin: EdgeInsets.all(3.0),
+                    child: CardTile(
+                      settingsCard: getSettingsCard()[index - 1],
+                    ),
+                  );
+              },
+            ),
+          ),
+          Container(
+            width: _media.width,
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: getSettingsCard().length + 1 ,
+              itemBuilder: (BuildContext context, int index) {
+                if(index == 0) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Text("General"),
+                  );
+                }
+                return Container(
+                  margin: EdgeInsets.all(3.0),
+                  child: CardTile(
+                    settingsCard: getSettingsCard()[index - 1],
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
