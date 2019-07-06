@@ -45,6 +45,7 @@ flutter:
    - assets/images/notification.png
    - assets/images/settings.png
    - assets/images/security.png
+   - assets/images/edit.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -59,6 +60,7 @@ flutter:
         - asset: assets/fonts/avenir/Avenir-Heavy.ttf
         - asset: assets/fonts/avenir/Avenir-Roman.ttf
         - asset: assets/fonts/avenir/Avenir-Medium.ttf
+          weight: 400
 
 
   # For details regarding fonts from package dependencies,

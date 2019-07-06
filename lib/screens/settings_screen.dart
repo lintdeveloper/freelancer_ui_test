@@ -31,6 +31,39 @@ class SettingsScreen extends StatelessWidget {
                     )
                   ],
                 ),
+                Positioned(
+                  top: _media.longestSide <= 775
+                      ? screenAwareSize(40, context)
+                      : screenAwareSize(45, context),
+                  left: 10,
+                  right: 10,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: Text(
+                              "Profile",
+                              style: TextStyle(
+                                  fontSize: _media.longestSide <= 775 ? 20 : 40,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "Avenir"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0),
+                            child: Image.asset("assets/images/edit.png"),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

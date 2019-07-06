@@ -10,7 +10,6 @@ class CardTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _media = MediaQuery.of(context).size;
     return Card(
         elevation: 2.0,
         shape: RoundedRectangleBorder(
