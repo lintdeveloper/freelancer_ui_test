@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_ui_test/routes.dart';
 
+import 'utils/custom_theme_data.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,9 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wallet Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: customThemeData(),
       onGenerateRoute: (settings){
         return MaterialPageRoute(
             builder: (BuildContext context) => makeRoute(

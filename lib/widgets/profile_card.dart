@@ -20,38 +20,36 @@ class ProfileCard extends StatelessWidget {
         children: <Widget>[
           Container(
             width: _media.width - 40,
-            padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+            padding: EdgeInsets.only(left: 30, right: 30, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.asset("assets/images/ricardo.png", height: 50, width: 50,),
+                Image.asset("assets/images/ricardo.png", height: 40, width: 50,),
                 SizedBox(
                   height: 5,
                 ),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    profile.userName,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Color.fromRGBO(4, 44, 92, 1),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Image.asset("assets/images/verified.png")
+                ],
+                  
+              ),
                 Text(
                   profile.userEmail,
-                  style: Theme.of(context).textTheme.headline.copyWith(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      profile.userName,
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Image.asset("assets/images/verified.png")
-                  ],
+
+                  style: TextStyle(color: Colors.grey.shade400, fontWeight: FontWeight.w700, fontSize: 14.0 )
                 )
               ],
             ),
